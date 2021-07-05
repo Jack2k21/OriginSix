@@ -59,7 +59,7 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true,
   breakpoints: {
-    767: {
+    992: {
       slidesPerView: 2,
       setWrapperSize: true
     }
@@ -90,13 +90,14 @@ scrollreveal.reveal(
 
 // pegar todos os itens do menu e ao clicar em algum item disparar um evento e rolar a página suavemente para a sessão desejada
 
-/*function scrollSmooth(link) {
+function scrollSmooth(link) {
   const sectionId = link.getAttribute('href')
   document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' })
-}*/
+}
 
 /* Menu ativo conforme a sessão ativa na página */
 const sections = document.querySelectorAll('main section[id]')
+
 function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
